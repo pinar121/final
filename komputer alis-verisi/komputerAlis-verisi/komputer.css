@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.choosrKomputer{
+    width: 250px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+input{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.active1{
+    color: blue;
+}
+.parent{
+    display: flex;
+}
+.komputerParent2{
+    width: 30%;
+}
+.komputerParent{
+    width: 70%;
+    padding: 20px;
+    margin-top: 50px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.myKomputerParent{
+    width: 30%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+li:hover {
+    color: blue;
+ }
+.product {
+  display: none; /* Başlangıçta her iki div de gizli */
+}

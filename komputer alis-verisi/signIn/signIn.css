@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+main{
+    margin: auto;
+    width: 300px;
+}
+.secondPelement{
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(182, 238, 182);
+    color: green;
+}

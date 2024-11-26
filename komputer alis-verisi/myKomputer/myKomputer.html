@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./myKomputer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <button class="btn btn-warning myBtn" style="margin-top: 20px;margin-left: 10px;">Əses sehife</button>
+        <!-- Modal -->
+        <button class="btn btn-primary myBtn2" style="margin-top: 20px;margin-left: 10px;">Yeni kpmputer</button>
+        <div class="modal1 modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content firstParent">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3 needs-validation  createForm editForm" novalidate>
+                            <h1 style="text-align: center;">Yeni</h1>
+                            <div class="col-12">
+
+
+                                <div class="col-md-3" style="width: 463px;">
+                                    <label for="kataqoriya" class="form-label">kataqoriya:</label>
+                                    <select class="form-select" id="kataqoriya" required>
+                                        <option selected>Acer</option>
+                                        <option>Hp</option>
+                                        <option>Asus</option>
+                                        <option>Dell</option>
+                                        <option>Lenovo</option>
+                                        <option>LG</option>
+                                        <option>Casper</option>
+                                        <option>Fujitsu</option>
+                                        <option>Nexut</option>
+                                        <option>Samsung</option>
+                                        <option>Toshiba</option>
+                                        <option>Sony</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="Ad" class="form-label">Ad:</label>
+                                    <input type="text" class="form-control" id="Ad" required min="2" maxlength="30">
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın,minimum2 maximum 30 simvol ola biler
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="Qiymet" class="form-label">Qiymet:</label>
+                                    <input type="text" class="form-control" id="Qiymet" required minlength="0"
+                                        maxlength="100000">
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın minimum0, maximum 100000 simvol ola biler
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="tesvir" class="form-label">tesvir:</label>
+                                    <input type="text" class="form-control" id="tesvir" required>
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın,minimum2, maximum 300 simvol ola biler
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3" style="width: 463px;">
+                                    <label for="Yeni" class="form-label">Yeni:</label>
+                                    <select class="form-select" id="Yeni" required>
+                                        <option selected>Beli</option>
+                                        <option>Xeyr</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="Şekil" class="form-label">Şekil:</label>
+                                    <input type="text" class="form-control" id="Şekil" required>
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="əməliYaddaş" class="form-label">Əməli yaddaş (GB):</label>
+                                    <input type="text" class="form-control" id="əməliYaddaş" required>
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="MərkəziProsessor" class="form-label">Mərkəzi prosessor:</label>
+                                    <input type="text" class="form-control" id="MərkəziProsessor" required>
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="daimYaddaş" class="form-label">Daim yaddaş (GB):</label>
+                                    <input type="text" class="form-control" id="daimYaddaş" required>
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3" style="width: 463px;">
+                                    <label for="daimYaddaşTibbi" class="form-label">Daim yaddaş tibbi:</label>
+                                    <select class="form-select" id="daimYaddaşTibbi" required>
+                                        <option selected>HDD</option>
+                                        <option>SDD</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="ƏməliyyatSistemi" class="form-label">Əməliyyat sistemi:</label>
+                                    <input type="text" class="form-control" id="ƏməliyyatSistemi" required>
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="videoKart" class="form-label">Video kart (GB):</label>
+                                    <input type="text" class="form-control" id="videoKart" required>
+                                    <div class="valid-feedback">
+                                        Düzgündür
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Boş qoymayın
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn-primary" type="submit">Yadda saxla</button>
+                                    <button class="btn btn-warning" type="submit">Məlumatı sıfırla</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        </div>
+        <div>
+            <table id="myTable" class="table" border="1" style="margin-top: 50px;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ad</th>
+                        <th>Şekil</th>
+                        <th>Qiymet</th>
+                        <th>Əməliyyat</th>
+                    </tr>
+                </thead>
+            </table>
+            <body>
+                <div id="editDiv">
+                    <div class="modal1 modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content firstParent">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3 needs-validation  createForm editForm" novalidate>
+                                    <h1 style="text-align: center;">Yeni</h1>
+                                    <div class="col-12">
+        
+        
+                                        <div class="col-md-3" style="width: 463px;">
+                                            <label for="kataqoriya" class="form-label">kataqoriya:</label>
+                                            <select class="form-select" id="kataqoriya" required>
+                                                <option selected>Acer</option>
+                                                <option>Hp</option>
+                                                <option>Asus</option>
+                                                <option>Dell</option>
+                                                <option>Lenovo</option>
+                                                <option>LG</option>
+                                                <option>Casper</option>
+                                                <option>Fujitsu</option>
+                                                <option>Nexut</option>
+                                                <option>Samsung</option>
+                                                <option>Toshiba</option>
+                                                <option>Sony</option>
+                                            </select>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="Ad" class="form-label">Ad:</label>
+                                            <input type="text" class="form-control" id="Ad" required min="2" maxlength="30">
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın,minimum2 maximum 30 simvol ola biler
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="Qiymet" class="form-label">Qiymet:</label>
+                                            <input type="text" class="form-control" id="Qiymet" required minlength="0"
+                                                maxlength="100000">
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın minimum0, maximum 100000 simvol ola biler
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="tesvir" class="form-label">tesvir:</label>
+                                            <input type="text" class="form-control" id="tesvir" required>
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın,minimum2, maximum 300 simvol ola biler
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-3" style="width: 463px;">
+                                            <label for="Yeni" class="form-label">Yeni:</label>
+                                            <select class="form-select" id="Yeni" required>
+                                                <option selected>Beli</option>
+                                                <option>Xeyr</option>
+                                            </select>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="Şekil" class="form-label">Şekil:</label>
+                                            <input type="text" class="form-control" id="Şekil" required>
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="əməliYaddaş" class="form-label">Əməli yaddaş (GB):</label>
+                                            <input type="text" class="form-control" id="əməliYaddaş" required>
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="MərkəziProsessor" class="form-label">Mərkəzi prosessor:</label>
+                                            <input type="text" class="form-control" id="MərkəziProsessor" required>
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="daimYaddaş" class="form-label">Daim yaddaş (GB):</label>
+                                            <input type="text" class="form-control" id="daimYaddaş" required>
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-3" style="width: 463px;">
+                                            <label for="daimYaddaşTibbi" class="form-label">Daim yaddaş tibbi:</label>
+                                            <select class="form-select" id="daimYaddaşTibbi" required>
+                                                <option selected>HDD</option>
+                                                <option>SDD</option>
+                                            </select>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="ƏməliyyatSistemi" class="form-label">Əməliyyat sistemi:</label>
+                                            <input type="text" class="form-control" id="ƏməliyyatSistemi" required>
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <label for="videoKart" class="form-label">Video kart (GB):</label>
+                                            <input type="text" class="form-control" id="videoKart" required>
+                                            <div class="valid-feedback">
+                                                Düzgündür
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Boş qoymayın
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" type="submit">Yadda saxla</button>
+                                            <button class="btn btn-warning" type="submit">Məlumatı sıfırla</button>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                </div>
+        </div>
+
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./myKomputer.js"></script>
+</body>
+
+</html>
